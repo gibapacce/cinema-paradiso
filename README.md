@@ -1,4 +1,4 @@
-# 🎬 Cinema Reservas - Sistema de Reservas de Cinema
+# 🎬 Cinema Paradiso - Sistema de Reservas de Cinema
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
