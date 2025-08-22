@@ -1,0 +1,176 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+/* Filmes */
+.lista-filmes {
+  padding: 20px;
+}
+
+.filmes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filme-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.filme-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sessões */
+.sessoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.sessao-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sessao-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout Assentos */
+.layout-assentos {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-sessao {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.legenda {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tela {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.sala {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.fileira {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.label-fileira {
+  width: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.assentos-fileira {
+  display: flex;
+  gap: 8px;
+}
+
+.assento {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.assento.livre {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #45a049;
+}
+
+.assento.livre:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.assento.ocupado {
+  background-color: #f44336;
+  color: white;
+  border-color: #da190b;
+  cursor: not-allowed;
+}
+
+.assento.manutencao {
+  background-color: #666;
+  color: white;
+  border-color: #555;
+  cursor: not-allowed;
+}
+
+.assento:disabled {
+  cursor: not-allowed;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+
+  .filmes-grid,
+  .sessoes-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .assentos-fileira {
+    gap: 4px;
+  }
+
+  .assento {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .legenda {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
